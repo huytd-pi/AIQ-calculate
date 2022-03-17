@@ -1,0 +1,955 @@
+[
+    {
+        "AQI": 85,
+        "AQITime": 1614909600000,
+        "Address": "phường Bưởi, quận Tây Hồ",
+        "KitID": 1037,
+        "Location": [
+            21.05226,
+            105.8117
+        ],
+        "Name": "Trung tâm Live & Learn",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    35.86666666666667,
+                    44.977777777777774,
+                    80.8
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19.075,
+                    81.375
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    609.2
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 91603,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 10,
+        "AQITime": 1607997600000,
+        "Address": "phường Bách Khoa, quận Hai Bà Trưng",
+        "KitID": 1038,
+        "Location": [
+            21.00257,
+            105.84653
+        ],
+        "Name": "Trường THCS & THPT Tạ Quang Bửu",
+        "Sensors": [
+            {
+                "Time": 1607990400000,
+                "averageByHour": [
+                    7,
+                    5.333333333333333,
+                    11
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1607994000000,
+                "averageByHour": [
+                    15,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1607994000000,
+                "averageByHour": [
+                    438.3968253968254
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 148292,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 91,
+        "AQITime": 1614909600000,
+        "Address": "phường Trung Hòa, quận Cầu Giấy",
+        "KitID": 1039,
+        "Location": [
+            21.00764015,
+            105.80453388
+        ],
+        "Name": "Trường mầm non KOI",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    38.80597014925373,
+                    44.55223880597015,
+                    87.02985074626865
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    666.1204819277109
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 61324,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 53,
+        "AQITime": 1574668800000,
+        "Address": "phường Phạm Đình Hổ, quận Hai Bà Trưng",
+        "KitID": 1040,
+        "Location": [
+            21.01318005,
+            105.86081255
+        ],
+        "Name": "Viện Sức khỏe Nghề nghiệp và Môi trường",
+        "Sensors": [
+            {
+                "Time": 1574661600000,
+                "averageByHour": [
+                    39.97435897435897,
+                    37.69230769230769,
+                    68.05128205128206
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1574661600000,
+                "averageByHour": [
+                    24,
+                    64
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1574661600000,
+                "averageByHour": [
+                    601.5128205128206
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 41574,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 119,
+        "AQITime": 1614909600000,
+        "Address": "phường Đồng Tâm, quận Hai Bà Trưng",
+        "KitID": 1041,
+        "Location": [
+            20.99603,
+            105.84455
+        ],
+        "Name": "Trường tiểu học Công nghệ giáo dục",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    56.392857142857146,
+                    66.17857142857143,
+                    128
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19.039473684210527,
+                    81.19736842105263
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    595.2763157894736
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 109030,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 7,
+        "AQITime": 1598439600000,
+        "Address": "phường Vĩnh Phúc, quận Ba Đình",
+        "KitID": 1043,
+        "Location": [
+            21.04169108,
+            105.80900309
+        ],
+        "Name": "Viện Tư vấn Phát triển Kinh tế Xã hội Nông thôn và Miền núi",
+        "Sensors": [
+            {
+                "Time": 1598432400000,
+                "averageByHour": [
+                    12.275862068965518,
+                    5.241379310344827,
+                    11.724137931034482
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1598432400000,
+                "averageByHour": [
+                    27.08974358974359,
+                    88.6923076923077
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1598432400000,
+                "averageByHour": [
+                    420.4871794871795
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 318963,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 103,
+        "AQITime": 1614909600000,
+        "Address": "phường Đức Thắng, quận Bắc Từ Liêm",
+        "KitID": 1044,
+        "Location": [
+            21.082295105950106,
+            105.77339286528215
+        ],
+        "Name": "Trường THCS Đức Thắng",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    49.310344827586206,
+                    55.310344827586206,
+                    101.17241379310344
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    18.710843373493976,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    733.0120481927711
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 5822,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 94,
+        "AQITime": 1614909600000,
+        "Address": "phường Ô Chợ Dừa, quận Đống Đa",
+        "KitID": 1045,
+        "Location": [
+            21.02431735,
+            105.82139752
+        ],
+        "Name": "Trường mầm non Casa Dei Piccioni",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    40.666666666666664,
+                    50.074074074074076,
+                    96.22222222222223
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    22,
+                    96
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    608.3048780487804
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 757336,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 95,
+        "AQITime": 1614909600000,
+        "Address": "phường Dịch Vọng Hậu, quận Cầu Giấy",
+        "KitID": 1046,
+        "Location": [
+            21.03793057,
+            105.78543088
+        ],
+        "Name": "Trường mầm non Búp Sen Xanh",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    56.34920634920635,
+                    59.857142857142854,
+                    112.41269841269842
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19.964285714285715,
+                    85.82142857142857
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    807.5952380952381
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 668477,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 82,
+        "AQITime": 1614909600000,
+        "Address": "phường Cống Vị, quận Ba Đình",
+        "KitID": 1047,
+        "Location": [
+            21.03281213,
+            105.81257742
+        ],
+        "Name": "Trường Thực Nghiệm",
+        "Sensors": [
+            {
+                "Time": 1614906000000,
+                "averageByHour": [
+                    13.666666666666666,
+                    38,
+                    55.666666666666664
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    20.78125,
+                    89.90625
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    513.84375
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 296899,
+        "locationType": 1,
+        "outdoor": true
+    },
+    {
+        "AQI": 92,
+        "AQITime": 1614909600000,
+        "Address": "xã Cự Khê, huyện Thanh Oai",
+        "KitID": 1051,
+        "Location": [
+            20.9313357,
+            105.79145879
+        ],
+        "Name": "Trường Liên cấp Tuệ Đức",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    36.656716417910445,
+                    42.40298507462686,
+                    75.02985074626865
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19.94047619047619,
+                    84.57142857142857
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    644.5833333333334
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 416440,
+        "locationType": 1,
+        "outdoor": true
+    },
+    {
+        "AQI": 67,
+        "AQITime": 1588582800000,
+        "Address": "phường Trung Hòa, quận Cầu Giấy",
+        "KitID": 1053,
+        "Location": [
+            21.01489,
+            105.79834
+        ],
+        "Name": "Trường Mầm non Trăng Đỏ",
+        "Sensors": [
+            {
+                "Time": 1588579200000,
+                "averageByHour": [
+                    33.72727272727273,
+                    31.151515151515152,
+                    53.15151515151515
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1588586400000,
+                "averageByHour": [
+                    27.8,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1588586400000,
+                "averageByHour": [
+                    447.6
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 74552,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 48,
+        "AQITime": 1605340800000,
+        "Address": "phường Trung Văn, quận Từ Liêm",
+        "KitID": 1055,
+        "Location": [
+            20.99151816,
+            105.7902017
+        ],
+        "Name": "Trường Olympia",
+        "Sensors": [
+            {
+                "Time": 1605484800000,
+                "averageByHour": [
+                    41,
+                    50,
+                    102
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1605502800000,
+                "averageByHour": [
+                    19.225806451612904,
+                    81.48387096774194
+                ],
+                "name": "DHT22"
+            }
+        ],
+        "TotalViews": 89857,
+        "locationType": 1,
+        "outdoor": true
+    },
+    {
+        "AQI": 131,
+        "AQITime": 1588647600000,
+        "Address": "phường Phú Đô, quận Nam Từ Liêm",
+        "KitID": 1072,
+        "Location": [
+            21.000472681069464,
+            105.7643129138107
+        ],
+        "Name": "Viện Môi trường Nông Nghiệp",
+        "Sensors": [
+            {
+                "Time": 1589313600000,
+                "averageByHour": [
+                    37,
+                    39,
+                    65
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1589328000000,
+                "averageByHour": [
+                    24,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1589328000000,
+                "averageByHour": [
+                    418.42857142857144
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 1693,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 62,
+        "AQITime": 1604073600000,
+        "Address": "phường Đông Ngạc, quận Bắc Từ Liêm",
+        "KitID": 1080,
+        "Location": [
+            21.08284,
+            105.779777
+        ],
+        "Name": "Trường Đại học Y tế Công cộng",
+        "Sensors": [
+            {
+                "Time": 1604066400000,
+                "averageByHour": [
+                    28.353846153846153,
+                    26.23076923076923,
+                    42.56923076923077
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1604066400000,
+                "averageByHour": [
+                    21.329268292682926,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1604066400000,
+                "averageByHour": [
+                    685.5365853658536
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 89409,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 97,
+        "AQITime": 1614909600000,
+        "Address": "phường Yên Hòa, quận Cầu Giấy",
+        "KitID": 1081,
+        "Location": [
+            21.0181984,
+            105.7952921
+        ],
+        "Name": "PanNature - Trung tâm Con người và Thiên nhiên",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    39.45161290322581,
+                    47.935483870967744,
+                    88.29032258064517
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    850.1851851851852
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 6347,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 55,
+        "AQITime": 1603332000000,
+        "Address": "phường Minh Khai, quận Bắc Từ Liêm",
+        "KitID": 1082,
+        "Location": [
+            21.053519,
+            105.736145
+        ],
+        "Name": "Trường Đại học Công Nghiệp Hà Nội",
+        "Sensors": [
+            {
+                "Time": 1603328400000,
+                "averageByHour": [
+                    45,
+                    42,
+                    70
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1603339200000,
+                "averageByHour": [
+                    24,
+                    63.3875
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1603339200000,
+                "averageByHour": [
+                    611.2125
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 37028,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 116,
+        "AQITime": 1614909600000,
+        "Address": "phường Xuân Phương, quận Nam Từ Liêm",
+        "KitID": 1084,
+        "Location": [
+            21.03231702703264,
+            105.74872450649983
+        ],
+        "Name": "Trường THCS Nam Từ Liêm",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    60.45454545454545,
+                    68.27272727272727,
+                    127.63636363636364
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    588.6857142857143
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 59733,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 146,
+        "AQITime": 1614852000000,
+        "Address": "phường Kim Mã, quận Ba Đình",
+        "KitID": 1086,
+        "Location": [
+            21.031291,
+            105.818691
+        ],
+        "Name": "Viện Woolcock",
+        "Sensors": [
+            {
+                "Time": 1614884400000,
+                "averageByHour": [
+                    29.5,
+                    30.5,
+                    51.5
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19.48051948051948,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    605.8311688311688
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 6254,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 72,
+        "AQITime": 1581613200000,
+        "Address": "phường Cổ Nhuế 1, quận Bắc Từ Liêm",
+        "KitID": 1087,
+        "Location": [
+            21.050582,
+            105.792034
+        ],
+        "Name": "Trường Tiểu học & THCS Everest",
+        "Sensors": [
+            {
+                "Time": 1581606000000,
+                "averageByHour": [
+                    31.125,
+                    33,
+                    63.75
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1581609600000,
+                "averageByHour": [
+                    20.987951807228917,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1581609600000,
+                "averageByHour": [
+                    749.0481927710844
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 30754,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 82,
+        "AQITime": 1614909600000,
+        "Address": "xã Trâu Quỳ, huyện Gia Lâm",
+        "KitID": 1088,
+        "Location": [
+            21.000939,
+            105.931785
+        ],
+        "Name": "Học viện Nông nghiệp Việt Nam",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    39.416666666666664,
+                    38.416666666666664,
+                    63.833333333333336
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    794.7407407407408
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 53879,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 120,
+        "AQITime": 1614909600000,
+        "Address": "phường Dịch Vọng Hậu, quận Cầu Giấy",
+        "KitID": 1089,
+        "Location": [
+            21.037454,
+            105.784927
+        ],
+        "Name": "Trường THCS & THPT Nguyễn Tất Thành",
+        "Sensors": [
+            {
+                "Time": 1614906000000,
+                "averageByHour": [
+                    56.142857142857146,
+                    63.42857142857143,
+                    116.42857142857143
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19.12,
+                    81.2
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    684.5866666666667
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 159030,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 95,
+        "AQITime": 1614909600000,
+        "Address": "xã Vân Hà, huyện Đông Anh",
+        "KitID": 1090,
+        "Location": [
+            21.14768475,
+            105.9158227
+        ],
+        "Name": "Ủy ban Nhân dân xã Vân Hà",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    40.57142857142857,
+                    46.80952380952381,
+                    81.57142857142857
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    569.5802469135803
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 29302,
+        "locationType": 2,
+        "outdoor": true
+    },
+    {
+        "AQI": 115,
+        "AQITime": 1614909600000,
+        "Address": "xã Kim Chung, huyện Đông Anh",
+        "KitID": 1091,
+        "Location": [
+            21.131537699410796,
+            105.77801536857807
+        ],
+        "Name": "Ủy ban Nhân dân xã Kim Chung",
+        "Sensors": [
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    48.1,
+                    61.65,
+                    111.15
+                ],
+                "name": "PMS5003"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    19,
+                    81
+                ],
+                "name": "DHT22"
+            },
+            {
+                "Time": 1614909600000,
+                "averageByHour": [
+                    681.271186440678
+                ],
+                "name": "MQ7"
+            }
+        ],
+        "TotalViews": 3294,
+        "locationType": 2,
+        "outdoor": true
+    }
+]
