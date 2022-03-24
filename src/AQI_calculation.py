@@ -1,8 +1,3 @@
-
-
-from ast import Num
-from cgi import test
-from time import process_time_ns
 import pandas as pd
 import array
 import numpy as np
@@ -87,21 +82,35 @@ class BPiTable:
         PM10_Parameter  = np.array([0,50,150,250,350,420,500,600])
         PM2_5_Parameter = np.array([0,25,50,80,150,250,350,500])
         parameter       = np.array([])
-        match nameTable:
-            case 'O3_1h':
-                parameter = O3_1h_Parameter
-            case 'O3_8h':
-                parameter = O3_8h_Parameter
-            case 'CO':
-                parameter = CO_Parameter
-            case 'SO2':
-                parameter = SO2_Parameter
-            case 'NO2':
-                parameter = NO2_Parameter
-            case 'PM10':
-                parameter = PM10_Parameter
-            case 'PM2.5':
-                parameter = PM2_5_Parameter
+        if nameTable == 'O3_1h':
+            parameter = O3_1h_Parameter
+        elif nameTable == 'O3_8h':
+            parameter = O3_8h_Parameter
+        elif nameTable == 'CO':
+            parameter = CO_Parameter
+        elif nameTable == 'SO2':
+            parameter = SO2_Parameter
+        elif nameTable == 'NO2':
+            parameter = NO2_Parameter
+        elif nameTable == 'PM10':
+            parameter = PM10_Parameter
+        elif nameTable == 'PM2.5':
+            parameter = PM2_5_Parameter
+        # match nameTable:
+        #     case 'O3_1h':
+        #         parameter = O3_1h_Parameter
+        #     case 'O3_8h':
+        #         parameter = O3_8h_Parameter
+        #     case 'CO':
+        #         parameter = CO_Parameter
+        #     case 'SO2':
+        #         parameter = SO2_Parameter
+        #     case 'NO2':
+        #         parameter = NO2_Parameter
+        #     case 'PM10':
+        #         parameter = PM10_Parameter
+        #     case 'PM2.5':
+        #         parameter = PM2_5_Parameter
         # print(parameter)
         a   = None
         a_1 = None
