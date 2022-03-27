@@ -3,9 +3,9 @@ import numpy as np
 class BPiTable:
     def Table(nameTable,num):
         I_Parameter     = np.array([0,50,100,150,200,300,400,500])
-        O3_1h_Parameter = np.array([0,100,120,170,210,400])
+        O3_1h_Parameter = np.array([0,160,200,300,400,800,1000,1200])
         O3_8h_Parameter = np.array([0,100,120,170,210,400])
-        CO_Parameter    = np.array([0,160,200,300,400,800,1000,1200])
+        CO_Parameter    = np.array([0,10000,30000,45000,60000,90000,120000,150000])
         SO2_Parameter   = np.array([0,125,350,550,800,1600,2100,2630])
         NO2_Parameter   = np.array([0,100,200,700,1200,2350,3100,3850])
         PM10_Parameter  = np.array([0,50,150,250,350,420,500,600])
@@ -45,7 +45,8 @@ class BPiTable:
         a_1 = None
         b   = None
         b_1 = None
-        for i in range(0,len(parameter)-1):
+        length = len(parameter)
+        for i in range(0,length-1):
             if num >= parameter[i]:
                 a   = parameter[i]
                 a_1 = parameter[i+1]

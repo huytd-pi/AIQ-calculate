@@ -9,7 +9,7 @@ class NowCast:
             MonitoringValues = np.array([])
             for i in range(1,13):
                 MonitoringValues = np.append(MonitoringValues,argument[index-i+1])
-            # print(MonitoringValues,"    ")
+            # At least 2 of the 3 values ​​c1, c2, c3 have data to calculate the Nowcast value
             if  (np.isnan(MonitoringValues[0]) and np.isnan(MonitoringValues[1])) or\
                 (np.isnan(MonitoringValues[0]) and np.isnan(MonitoringValues[2])) or \
                 (np.isnan(MonitoringValues[1]) and np.isnan(MonitoringValues[2])) or \
