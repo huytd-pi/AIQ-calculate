@@ -3,8 +3,11 @@ import numpy as np
 
 
 class ReadDataAverageByDay():
-    def __init__(self):
-        self.dataCSV = pd.read_csv('../DataAverageByHour/dataFairnet_averageByDay_KitID1037.csv')
+    def __init__(self,filePath):
+        self.filePath = filePath
+
+    def importPath(self):
+        self.dataCSV = pd.read_csv(self.filePath)
     
     def PM1_0(self):    
         PM1_0       = self.dataCSV['PM1.0']

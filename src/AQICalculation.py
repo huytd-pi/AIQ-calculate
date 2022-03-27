@@ -4,15 +4,20 @@ from CalculateNowcast import NowCast
 from Table import BPiTable
 
 # ReadDataAverageByHour.importPath('../DataAverageByHour/dataFairnet_averageByHour_KitID1037.csv')
-PM1_0       = ReadDataAverageByHour().PM1_0()
-PM2_5       = ReadDataAverageByHour().PM2_5()
-PM10        = ReadDataAverageByHour().PM10()
-Temperature = ReadDataAverageByHour().Temperature()
-Humidity    = ReadDataAverageByHour().Humidity()
-CO          = ReadDataAverageByHour().CO()
+# PM1_0       = ReadDataAverageByHour().PM1_0()
+# PM2_5       = ReadDataAverageByHour().PM2_5()
+# PM10        = ReadDataAverageByHour().PM10()
+# Temperature = ReadDataAverageByHour().Temperature()
+# Humidity    = ReadDataAverageByHour().Humidity()
+# CO          = ReadDataAverageByHour().CO()
 
 
 class AQI:  
+    def __init__(self,PM2_5,PM10,CO):
+        self.PM2_5 = PM2_5
+        self.PM10 = PM10
+        self.CO = CO
+
     def AQIhOxygenElement(I,I_1,BP,BP_1,oxygen):
         AQI = ((I_1-I)/(BP_1-BP))*(oxygen-BP)+I
         return AQI
@@ -20,7 +25,7 @@ class AQI:
         AQI = ((I_1-I)/(BP_1-BP))*(nowcast-BP)+I
         return AQI
 
-    def AQI_1h(nameParameter):
+    def AQI_1h(self,nameParameter):
         resultArray = np.array([])
         nowcastArray = np.array([])
         I = None
@@ -29,36 +34,36 @@ class AQI:
         BP_1 = None
         result = None
         if nameParameter == 'PM2_5':
-            nowcastArray = NowCast.Nowcast(PM2_5)
-            for i in range(11,len(PM2_5)):
-                if np.isnan(PM2_5[i]) or np.isnan(nowcastArray[i-11]):
+            nowcastArray = NowCast.Nowcast(self.PM2_5)
+            for i in range(11,len(self.PM2_5)):
+                if np.isnan(self.PM2_5[i]) or np.isnan(nowcastArray[i-11]):
                     result = np.nan
                     resultArray = np.append(resultArray,result)
                 else:
-                    I,I_1,BP,BP_1 = BPiTable.Table(nameTable=nameParameter,num=PM2_5[i])
+                    I,I_1,BP,BP_1 = BPiTable.Table(nameTable=nameParameter,num=self.PM2_5[i])
                     # print(I,I_1,BP,BP_1)
                     result = AQI.AQI_PM_Element(I,I_1,BP,BP_1,nowcast=nowcastArray[i-11])
                     resultArray = np.append(resultArray,result)
         elif nameParameter == 'PM10':
-            nowcastArray = NowCast.Nowcast(PM10)
-            for i in range(11,len(PM10)):
-                if np.isnan(PM10[i]) or np.isnan(nowcastArray[i-11]):
+            nowcastArray = NowCast.Nowcast(self.PM10)
+            for i in range(11,len(self.PM10)):
+                if np.isnan(self.PM10[i]) or np.isnan(nowcastArray[i-11]):
                     result = np.nan
                     resultArray = np.append(resultArray,result)
                 else:
-                    I,I_1,BP,BP_1 = BPiTable.Table(nameTable=nameParameter,num=PM10[i])
+                    I,I_1,BP,BP_1 = BPiTable.Table(nameTable=nameParameter,num=self.PM10[i])
                     # print(I,I_1,BP,BP_1)
                     result = AQI.AQI_PM_Element(I,I_1,BP,BP_1,nowcast=nowcastArray[i-11])
                     resultArray = np.append(resultArray,result)
         elif nameParameter == 'CO':
-            for i in range(11,len(CO)):
-                if np.isnan(CO[i]):
+            for i in range(11,len(self.CO)):
+                if np.isnan(self.CO[i]):
                     result = np.nan
                     resultArray = np.append(resultArray,result)
                 else:
-                    I,I_1,BP,BP_1 = BPiTable.Table(nameTable=nameParameter,num=CO[i])
+                    I,I_1,BP,BP_1 = BPiTable.Table(nameTable=nameParameter,num=self.CO[i])
                     # print(I,I_1,BP,BP_1)
-                    result = AQI.AQIhOxygenElement(I,I_1,BP,BP_1,CO[i])
+                    result = AQI.AQIhOxygenElement(I,I_1,BP,BP_1,self.CO[i])
                     resultArray = np.append(resultArray,result)
         return resultArray
     
@@ -80,11 +85,11 @@ class AQI:
             maxArray = np.append(maxArray,maxValue)
         return maxArray
 
-    def AQI_24h(nameParameter):
+    def AQI_24h(self,nameParameter):
         resultArray = np.array([])
         tempArray       = np.array([])
         if nameParameter == 'PM2_5':
-            tempArray = AQI.PM_24h_Average(PM2_5)
+            tempArray = AQI.PM_24h_Average(self.PM2_5)
             for i in range(0,len(tempArray)):
                 if np.isnan(tempArray[i]):
                     result = np.nan
@@ -96,7 +101,7 @@ class AQI:
                     resultArray = np.append(resultArray,result)
 
         elif nameParameter == 'PM10':
-            tempArray = AQI.PM_24h_Average(PM10)
+            tempArray = AQI.PM_24h_Average(self.PM10)
             for i in range(0,len(tempArray)):
                 if np.isnan(tempArray[i]):
                     result = np.nan
@@ -108,7 +113,7 @@ class AQI:
                     resultArray = np.append(resultArray,result)
 
         elif nameParameter == 'CO':
-            tempArray = AQI.Oxygen_24h_Max(CO)
+            tempArray = AQI.Oxygen_24h_Max(self.CO)
             for i in range(0,len(tempArray)):
                 if np.isnan(tempArray[i]):
                     result = np.nan
