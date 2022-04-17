@@ -5,6 +5,22 @@ import numpy as np
 import re
 import json
 import pandas as pd
+import csv_to_point_shapefile as shp
+import execnet
+import geopandas as gpd
+import shapefile as shp
+from ExportAQI import AQIExportCSV
+import os
+import multiprocessing
+
+def call_python_version(Version, Module, Function, ArgumentList):
+    gw      = execnet.makegateway("popen//python=python%s" % Version)
+    channel = gw.remote_exec("""
+        from %s import %s as the_function
+        channel.send(the_function(*channel.receive()))
+    """ % (Module, Function))
+    channel.send(ArgumentList)
+    return channel.receive()
 
 def plot(self):
     plt.figure()
@@ -26,48 +42,64 @@ def plot(self):
     plt.show()
     pass
 
-def main():
-    jsonFile = open('../FAirKit.json')
+def plot_file_shp():
+    hanoi = gpd.read_file('../shpHaNoi/HaNoi_2.shp',encoding='latin1')
+    point = gpd.read_file('../shpHaNoi/locationFairKit-point.shp',encoding='latin1')
+    ax = point.plot(color='red',markersize=2)
+    hanoi.boundary.plot(axes=ax,linewidth=0.5)
+    plt.show()
 
-    dataJsonFile = json.load(jsonFile)
+def shapefile_location_export(pathJsonFile):
+    data = pd.read_csv(pathJsonFile,encoding='utf-8')
+    kitID = data['KitID']
+    address = data['Address']
+    location = data['Location']
+    name = data['Name']
+    outdoor = data['outdoor']
+    latitude = np.array([])
+    longitude = np.array([])
+    for i in location:
+        temp = i.replace('[',', ').replace(']',', ').split(', ')
+        latitude = np.append(latitude,temp[1])
+        longitude = np.append(longitude,temp[2])
 
-    kitID = []
-    for d in dataJsonFile:
-        kitID.append(d['KitID'])
+    dict = {'Kit ID':kitID,'Địa chỉ':address,'Tên':name,'Latitude':latitude,'Longitude':longitude,'outdoor':outdoor}
+    df = pd.DataFrame(dict)
+    df.to_csv('../out/locationFairKit.csv',encoding='utf-8')
+    result = call_python_version("2.7", "csv_to_point_shapefile", "ExportShapeFile",  
+                             ['../out/locationFairKit.csv', '../out/locationFairKit.shp']) 
     
-    for i in kitID:
-        # DataAverageByDay
-        # textFileName = 'DataAverageByDay/dataFairnet_averageByDay_KitID' + str(i) +'.txt'
-        # csvFileName = 'DataAverageByDay/dataFairnet_averageByDay_KitID' + str(i) +'.csv'
 
-        # DataAverageByHour
-        filePath = '../DataAverageByHour/dataFairnet_averageByHour_KitID' + str(i) +'.csv'
-        saveFileName = '../out/dataFairnet_averageByHour_KitID' + str(i) +'.csv'
+def main():
 
-        AverageByHour = ReadDataAverageByHour(filePath)
-        AverageByHour.importPath()
-
-        PM1_0       = AverageByHour.PM1_0()
-        PM2_5       = AverageByHour.PM2_5()
-        PM10        = AverageByHour.PM10()
-        Temperature = AverageByHour.Temperature()
-        Humidity    = AverageByHour.Humidity()
-        CO          = AverageByHour.CO()
-
-        AQI_class   = AQI(PM2_5,PM10,CO)
-        CO_AQI      = AQI_class.AQI_1h('CO')
-        PM2_5_AQI   = AQI_class.AQI_1h('PM2_5')
-        PM10_AQI    = AQI_class.AQI_1h('PM10')
-
-        AQI_Aggregate_class = AQI_Aggregate(PM2_5_AQI,PM10_AQI,CO_AQI)
-        AQI_1h = AQI_Aggregate_class.AQI_Aggregate_1h()
-        
-        yymmdd,time,timeZone = AverageByHour.Time()
+    pass
         
         
     
     
 
 if __name__ == "__main__":
-    main()
-    pass
+    # printing main program process id
+    print("ID of main process: {}".format(os.getpid()))
+    ImportKitID = AQIExportCSV('../out/locationFairKit.csv')
+    # creating processes
+    p1 = multiprocessing.Process(target=ImportKitID.averageByDay)
+    p2 = multiprocessing.Process(target=ImportKitID.averageByHour)
+    # starting processes
+    p1.start()
+    p2.start()
+  
+    # process IDs
+    print("ID of process p1: {}".format(p1.pid))
+    print("ID of process p2: {}".format(p2.pid))
+  
+    # wait until processes are finished
+    p1.join()
+    p2.join()
+  
+    # both processes finished
+    print("Both processes finished execution!")
+  
+    # check if processes are alive
+    print("Process p1 is alive: {}".format(p1.is_alive()))
+    print("Process p2 is alive: {}".format(p2.is_alive()))

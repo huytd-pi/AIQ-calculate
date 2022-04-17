@@ -64,7 +64,7 @@ class AQI:
         averageArray    = np.array([])
         tempArray       = np.array([])
         tempArray       = PM
-        for i in range(0,len(tempArray)-24,24):
+        for i in range(0,len(tempArray),24):
             meanValue = np.mean(tempArray[i:i+24])
             averageArray = np.append(averageArray,meanValue)
         return averageArray
@@ -73,7 +73,7 @@ class AQI:
         maxArray       = np.array([])
         tempArray       = np.array([])
         tempArray       = oxygen
-        for i in range(0,len(tempArray)-24,24):
+        for i in range(0,len(tempArray),24):
             maxValue = np.max(tempArray[i:i+24])
             maxArray = np.append(maxArray,maxValue)
         return maxArray
@@ -128,9 +128,11 @@ class AQI_Aggregate:
         for i in range(0,len(self.CO_AQI)):
             if np.isnan(self.CO_AQI[i]) and np.isnan(self.PM10_AQI[i]) and np.isnan(self.PM2_5_AQI[i]):
                 result = np.nan
+                resultArray = np.append(resultArray,result)
             else:
                 result = np.nanmax([self.CO_AQI[i],self.PM2_5_AQI[i],self.PM10_AQI[i]])
                 resultArray = np.append(resultArray,result)
+            
         return resultArray
 
     def AQI_Aggregate_24h(self):
@@ -138,7 +140,8 @@ class AQI_Aggregate:
         for i in range(0,len(self.CO_AQI)):
             if np.isnan(self.CO_AQI[i]) and np.isnan(self.PM10_AQI[i]) and np.isnan(self.PM2_5_AQI[i]):
                 result = np.nan
+                resultArray = np.append(resultArray,result)
             else:
                 result = np.nanmax([self.CO_AQI[i],self.PM2_5_AQI[i],self.PM10_AQI[i]])
-            resultArray = np.append(resultArray,result)
+                resultArray = np.append(resultArray,result)
         return resultArray
