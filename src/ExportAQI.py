@@ -1,16 +1,18 @@
 from ReadCSV import ReadDataAverageByDay,ReadDataAverageByHour
 import pandas as pd
 from AQICalculation import AQI_Aggregate,AQI
+import numpy as np
 
 class AQIExportCSV:
     def __init__(self,filePath):
         self.dataKitID = pd.read_csv(filePath)
+        self.dataYYMMDD = pd.read_csv(filePath)
 
     def averageByHour(self):
         kitID = self.dataKitID['Kit ID']
         for index in kitID:
-            filePath = '../DataAverageByHour/dataFairnet_averageByHour_KitID' + str(index) +'.csv'
-            saveFileName = '../out/data/DataAverageByHour/AQI_averageByHour_KitID' + str(index) +'.csv'
+            filePath = '../2020/DataAverageByHour/dataFairnet_averageByHour_KitID' + str(index) +'.csv'
+            saveFileName = '../out/data/2020/DataAverageByHour/AQI_averageByHour_KitID' + str(index) +'.csv'
             AverageByHour = ReadDataAverageByHour(filePath)
             AverageByHour.importPath()
 
@@ -34,9 +36,9 @@ class AQIExportCSV:
     def averageByDay(self):
         kitID = self.dataKitID['Kit ID']
         for index in kitID:
-            filePath = '../DataAverageByHour/dataFairnet_averageByHour_KitID' + str(index) +'.csv'
-            filePath1 = '../DataAverageByDay/dataFairnet_averageByDay_KitID' + str(index) +'.csv'
-            saveFileName = '../out/data/DataAverageByDay/AQI_averageByDay_KitID' + str(index) +'.csv'
+            filePath = '../2020/DataAverageByHour/dataFairnet_averageByHour_KitID' + str(index) +'.csv'
+            filePath1 = '../2020/DataAverageByDay/dataFairnet_averageByDay_KitID' + str(index) +'.csv'
+            saveFileName = '../out/data/2020/DataAverageByDay/AQI_averageByDay_KitID' + str(index) +'.csv'
             AverageByDay = ReadDataAverageByHour(filePath)
             AverageByDay.importPath()
             TimeDay = ReadDataAverageByDay(filePath1)
@@ -58,5 +60,6 @@ class AQIExportCSV:
             dict = {'yymmdd': yymmdd,'time':time,'time zone':timeZone,'AQI 24h':AQI_24h}
             df = pd.DataFrame(dict)
             df.to_csv(saveFileName,encoding='utf-8')
+
         
         

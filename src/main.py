@@ -5,7 +5,7 @@ import numpy as np
 import re
 import json
 import pandas as pd
-import csv_to_point_shapefile as shp
+# import csv_to_point_shapefile as shp
 import execnet
 import geopandas as gpd
 import shapefile as shp
@@ -75,10 +75,7 @@ def main():
     pass
         
         
-    
-    
-
-if __name__ == "__main__":
+def calculationData():
     # printing main program process id
     print("ID of main process: {}".format(os.getpid()))
     ImportKitID = AQIExportCSV('../out/locationFairKit.csv')
@@ -103,3 +100,7 @@ if __name__ == "__main__":
     # check if processes are alive
     print("Process p1 is alive: {}".format(p1.is_alive()))
     print("Process p2 is alive: {}".format(p2.is_alive()))
+
+if __name__ == "__main__":
+
+    calculationData()

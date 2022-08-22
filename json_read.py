@@ -3,8 +3,6 @@ import array
 import requests
 import pandas as pd
 
-# acc_url_averageByHour = "http://api2.fairnet.vn/data/averageByHour?KitID=1037&start=1609434000000&finish=1640970000000"
-acc_url_averageByDay = "http://api2.fairnet.vn/data/averageByDay?KitID=1037&start=1609462800000&finish=1640970000000"
 
 def loadAPI():
     jsonFile = open('FAirKit.json')
@@ -16,17 +14,22 @@ def loadAPI():
         kitID.append(d['KitID'])
 
     for i in kitID:
-        fileNameAverageByDay = "DataAverageByDay/dataFairnet_averageByDay_KitID" + str(i) + ".txt"
-        # fileNameAverageByHour = "DataAverageByHour/dataFairnet_averageByHour_KitID" + str(i) + ".txt"
+        acc_url_averageByHour = "http://api2.fairnet.vn/data/averageByHour?KitID=" + \
+            str(i) + "&start=1546275600000&finish=1577811600000"
+        # acc_url_averageByDay = "http://api2.fairnet.vn/data/averageByDay?KitID=" + \
+        #     str(i) + "&start=1546275600000&finish=1577811600000"
+        print(i)
+        # fileNameAverageByDay = "2019/DataAverageByDay/dataFairnet_averageByDay_KitID" + str(i) + ".txt"
+        fileNameAverageByHour = "2019/DataAverageByHour/dataFairnet_averageByHour_KitID" + str(i) + ".txt"
 
-        fileDataAverageByDay = open(fileNameAverageByDay,'w')
-        # fileDataAverageByHour = open(fileNameAverageByHour,'w')
+        # fileDataAverageByDay = open(fileNameAverageByDay,'w')
+        fileDataAverageByHour = open(fileNameAverageByHour,'w')
         
-        fileDataAverageByDay.write(requests.get(acc_url_averageByDay).text)
-        # fileDataAverageByHour.write(requests.get(acc_url_averageByHour).text)
+        # fileDataAverageByDay.write(requests.get(acc_url_averageByDay).text)
+        fileDataAverageByHour.write(requests.get(acc_url_averageByHour).text)
 
-        fileDataAverageByDay.close()
-        # fileDataAverageByHour.close()
+        # fileDataAverageByDay.close()
+        fileDataAverageByHour.close()
 
         # print(dataJsonFile)
 
@@ -49,16 +52,18 @@ def formatTextToCSV():
         print('KitID: ',i)
         
         # DataAverageByDay
-        textFileName = 'DataAverageByDay/dataFairnet_averageByDay_KitID' + str(i) +'.txt'
-        csvFileName = 'DataAverageByDay/dataFairnet_averageByDay_KitID' + str(i) +'.csv'
+        # textFileNameDataAverageByDay = '2019/DataAverageByDay/dataFairnet_averageByDay_KitID' + str(i) +'.txt'
+        # csvFileNameDataAverageByDay = '2019/DataAverageByDay/dataFairnet_averageByDay_KitID' + str(i) +'.csv'
         # DataAverageByHour
-        # textFileName = 'DataAverageByHour/dataFairnet_averageByHour_KitID' + str(i) +'.txt'
-        # csvFileName = 'DataAverageByHour/dataFairnet_averageByHour_KitID' + str(i) +'.csv'
+        textFileNameDataAverageByHour = '2019/DataAverageByHour/dataFairnet_averageByHour_KitID' + str(i) +'.txt'
+        csvFileNameDataAverageByHour = '2019/DataAverageByHour/dataFairnet_averageByHour_KitID' + str(i) +'.csv'
 
-        csvFile = pd.read_csv(textFileName,delimiter =',',engine='python')
+        # csvFile = pd.read_csv(textFileNameDataAverageByDay,delimiter =',',engine='python')
+        csvFile = pd.read_csv(textFileNameDataAverageByHour,delimiter =',',engine='python')
 
         # csvFile.columns['Time','PM1','PM2.5','PM10','Temperature','Humidity','CO']
-        csvFile.to_csv(csvFileName,index=None)
+        # csvFile.to_csv(csvFileNameDataAverageByDay,index=None)
+        csvFile.to_csv(csvFileNameDataAverageByHour,index=None)
 
-# loadAPI()
+loadAPI()
 formatTextToCSV()
